@@ -1,0 +1,237 @@
+LICENCIA DE USO DE JUDOCOMBATES
+Versión 1.0 — 9 de agosto de 2026
+
+Copyright © 2026 Juan Cotolí San Félix. Todos los derechos reservados.
+
+AVISO PREVIO
+Esta NO es una licencia de código abierto ni una licencia libre. El programa se puede
+descargar, instalar y utilizar gratuitamente y sin límite, pero su modificación y la
+distribución de versiones modificadas están prohibidas. El código fuente se publica para
+consulta, auditoría y colaboración a través del repositorio oficial, no para su
+derivación independiente.
+
+
+1. DEFINICIONES
+
+1.1. «Titular»: Juan Cotolí San Félix, autor y titular de los derechos de explotación
+     del Programa.
+
+1.2. «Programa»: la aplicación JudoCombates, incluyendo su código fuente, código
+     objeto, binarios, recursos, plantillas, documentación y cualquier material asociado
+     publicado por el Titular.
+
+1.3. «Repositorio Oficial»: https://github.com/JuSaFe/JudoCombates, o el que el
+     Titular designe como tal en el futuro.
+
+1.4. «Usted»: la persona física o jurídica que descarga, instala, ejecuta, copia o accede
+     al Programa.
+
+1.5. «Obra Derivada»: cualquier modificación, adaptación, traducción, transformación,
+     extensión, refundición o trabajo basado total o parcialmente en el Programa.
+
+1.6. «Contribución»: cualquier código, documentación, recurso o material que Usted envíe
+     al Titular o al Repositorio Oficial con la intención de que se incorpore al Programa.
+
+
+2. CONCESIÓN DE USO
+
+2.1. El Titular le concede una licencia mundial, gratuita, no exclusiva, perpetua y
+     revocable únicamente por incumplimiento, para:
+
+     a) Descargar y obtener copias del Programa.
+     b) Instalarlo y ejecutarlo en cualquier número de equipos.
+     c) Utilizarlo sin límite de usuarios, eventos, participantes ni tiempo.
+     d) Utilizarlo para cualquier finalidad, incluidas la profesional, la comercial y la
+        institucional.
+     e) Acceder al código fuente y estudiarlo.
+     f) Realizar copias de seguridad.
+
+2.2. Esta concesión no exige pago, registro, suscripción ni autorización previa alguna.
+
+
+3. REDISTRIBUCIÓN
+
+3.1. Se permite redistribuir el Programa a terceros, siempre que se cumplan de forma
+     acumulativa todas estas condiciones:
+
+     a) Que se distribuya íntegro y SIN MODIFICACIÓN ALGUNA.
+     b) Que se haga a título gratuito, sin cobrar precio, canon ni contraprestación por
+        el Programa en sí.
+     c) Que se conserven intactos esta licencia, los avisos de copyright y toda mención
+        de autoría.
+     d) Que no se presente como obra propia ni se induzca a confusión sobre su autoría.
+
+3.2. Queda prohibido incorporar el Programa a un producto, servicio o paquete comercial
+     de pago sin autorización escrita del Titular.
+
+
+4. RESTRICCIONES
+
+Salvo autorización escrita y previa del Titular, o en la medida en que la ley aplicable lo
+permita de forma imperativa, queda prohibido:
+
+4.1. Modificar, adaptar, traducir, transformar o crear Obras Derivadas del Programa, con
+     la única excepción prevista en la cláusula 5.
+
+4.2. Distribuir, publicar, comunicar públicamente o poner a disposición de terceros
+     versiones modificadas del Programa, por cualquier medio y en cualquier soporte.
+
+4.3. Publicar el código fuente del Programa, íntegro o parcial, en otro repositorio,
+     plataforma o sitio distinto del Repositorio Oficial, incluidas las copias derivadas
+     de bifurcaciones («forks») que se mantengan, desarrollen o difundan de forma
+     independiente.
+
+4.4. Reutilizar fragmentos del código del Programa en otros proyectos, propios o ajenos.
+
+4.5. Eliminar, ocultar o alterar los avisos de copyright, autoría, licencia o cualquier
+     otra indicación de titularidad, tanto en el código como en la interfaz del Programa.
+
+4.6. Sublicenciar, vender, alquilar, arrendar o ceder los derechos concedidos por esta
+     licencia.
+
+4.7. Utilizar el nombre «JudoCombates» o el nombre del Titular para promocionar
+     productos o servicios derivados sin autorización escrita.
+
+4.8. Descompilar o aplicar ingeniería inversa sobre el Programa, más allá de lo que
+     permita imperativamente el artículo 100 del Texto Refundido de la Ley de Propiedad
+     Intelectual (RDL 1/1996) en materia de interoperabilidad.
+
+
+5. MODIFICACIONES Y CONTRIBUCIONES
+
+5.1. Toda modificación del Programa debe realizarse a través del Repositorio Oficial y
+     someterse al Titular mediante los cauces que este establezca (propuestas de cambio,
+     «pull requests» o los que en cada momento designe).
+
+5.2. Se permite crear una bifurcación técnica en la plataforma que aloja el Repositorio
+     Oficial con la finalidad exclusiva de preparar una Contribución y proponerla al
+     Titular. Esa bifurcación no podrá mantenerse como proyecto independiente, ni
+     publicitarse, ni distribuirse, ni continuar su desarrollo por separado una vez
+     aceptada o rechazada la propuesta.
+
+5.3. Toda Contribución queda sujeta al Acuerdo de Contribución del proyecto (archivo
+     CLA.md del Repositorio Oficial), que exige la cesión al Titular, en exclusiva y con
+     el máximo alcance permitido por la ley, de los derechos de explotación sobre la
+     Contribución. El envío de una Contribución implica la aceptación de dicho acuerdo.
+
+5.4. El Titular no está obligado a aceptar, incorporar ni mantener ninguna Contribución,
+     ni a remunerarla.
+
+
+6. PROPIEDAD INTELECTUAL
+
+6.1. El Programa se licencia, no se vende. El Titular conserva en todo momento la
+     titularidad de los derechos de explotación sobre el Programa y sobre cualquier
+     Contribución incorporada a él.
+
+6.2. Esta licencia no transfiere ningún derecho de propiedad intelectual o industrial más
+     allá de la concesión de uso expresamente descrita en la cláusula 2.
+
+6.3. La autoría original del Programa corresponde a Juan Cotolí San Félix y así deberá
+     reconocerse en toda copia, distribución o referencia al mismo.
+
+
+7. COMPONENTES DE TERCEROS
+
+7.1. El Programa incorpora bibliotecas de terceros que se rigen por sus propias licencias,
+     relacionadas en el archivo TERCEROS.md del Repositorio Oficial. Nada de lo dispuesto
+     en esta licencia modifica, restringe ni sustituye dichas licencias.
+
+7.2. Los derechos que esta licencia concede se refieren exclusivamente a la parte del
+     Programa de la que el Titular es autor.
+
+
+8. MARCAS Y LOGOTIPOS
+
+8.1. Los escudos, emblemas y logotipos de federaciones u otras entidades incluidos en el
+     Programa son propiedad de sus respectivos titulares y NO están cubiertos por esta
+     licencia. Su uso requiere autorización de dichos titulares.
+
+
+9. AUSENCIA DE GARANTÍA
+
+9.1. EL PROGRAMA SE PROPORCIONA «TAL CUAL», SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+     IMPLÍCITA, INCLUIDAS SIN LIMITACIÓN LAS DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN
+     DETERMINADO, AUSENCIA DE ERRORES Y NO INFRACCIÓN.
+
+9.2. El Titular no garantiza que el Programa funcione ininterrumpidamente ni libre de
+     errores, ni asume compromiso alguno de mantenimiento, actualización o soporte.
+
+9.3. La responsabilidad sobre la corrección de los datos gestionados, la realización de
+     copias de seguridad y el resultado de las competiciones dirigidas con el Programa
+     corresponde exclusivamente al Usuario.
+
+
+10. LIMITACIÓN DE RESPONSABILIDAD
+
+10.1. En la máxima medida permitida por la ley aplicable, el Titular no responderá de
+      daños directos, indirectos, incidentales, especiales o consecuentes, ni de pérdida
+      de datos, de beneficios o de oportunidad, derivados del uso o de la imposibilidad
+      de uso del Programa.
+
+10.2. Nada en esta licencia excluye la responsabilidad por dolo o por aquellos supuestos
+      que la ley imperativa española no permita excluir.
+
+
+11. RESOLUCIÓN
+
+11.1. Los derechos concedidos en la cláusula 2 se extinguen automáticamente en caso de
+      incumplimiento de cualquiera de las condiciones de esta licencia.
+
+11.2. Extinguidos los derechos, deberá cesar todo uso del Programa y destruir las copias
+      en su poder, sin perjuicio de las acciones legales que correspondan al Titular.
+
+11.3. La reincorporación a la licencia requiere autorización escrita del Titular.
+
+
+12. LEY APLICABLE Y JURISDICCIÓN
+
+12.1. Esta licencia se rige por la legislación española, en particular por el Texto
+      Refundido de la Ley de Propiedad Intelectual (Real Decreto Legislativo 1/1996).
+
+12.2. Para cualquier controversia, las partes se someten a los juzgados y tribunales
+      españoles, con renuncia a cualquier otro fuero que pudiera corresponderles, salvo
+      que la ley imponga imperativamente otro distinto.
+
+
+13. MODIFICACIÓN DE LA LICENCIA
+
+13.1. El Titular se reserva el derecho a publicar futuras versiones del Programa bajo
+      condiciones distintas, incluidas licencias comerciales o más permisivas.
+
+13.2. Cada versión publicada del Programa se rige por la licencia que la acompañaba en el
+      momento de su publicación. Los cambios de licencia no tienen efecto retroactivo
+      sobre las copias ya obtenidas.
+
+
+14. INTEGRIDAD DEL ACUERDO
+
+14.1. Esta licencia constituye el acuerdo completo entre las partes respecto del Programa.
+
+14.2. La declaración de nulidad de alguna de sus cláusulas no afectará a la validez de las
+      restantes, que se mantendrán en vigor.
+
+
+================================================================================
+ENGLISH SUMMARY (non-binding — the Spanish text above is the binding version)
+================================================================================
+
+JudoCombates is source-available software, NOT open source.
+
+You MAY: download, install and run it on any number of machines, for any purpose
+including commercial use, free of charge and without limits; read and study the source
+code; and redistribute the software verbatim, free of charge, with all notices intact.
+
+You MAY NOT: modify the software or create derivative works; distribute modified
+versions; republish the source code in any repository other than the official one; keep,
+develop or promote an independent fork; reuse portions of the code in other projects; or
+remove copyright and authorship notices.
+
+Modifications must be proposed to the official repository. A technical fork is allowed
+only to prepare such a proposal and must not be maintained as an independent project.
+All contributions are subject to the project's Contributor License Agreement (CLA.md),
+which assigns the economic rights in the contribution exclusively to the copyright holder.
+
+The software is provided "as is", without warranty of any kind.
+
+Copyright © 2026 Juan Cotolí San Félix. All rights reserved.
