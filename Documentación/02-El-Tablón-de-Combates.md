@@ -130,6 +130,12 @@ un dato de apoyo y no puede dejar sin ellos a la sala.
   mesa. Se cuenta sobre la cola **completa**, disputados incluidos, porque es el número por el que se
   llama al combate; si el tatami va por el 42, el primer pendiente pone 42 y no 1.
 - **Competidor 1, con fondo blanco**, a la izquierda: bandera, código y nombre, de fuera hacia dentro.
+- **El nombre sale tachado si el competidor está descalificado** de la competición
+  (`registros.descalificado`, que se marca desde «Combates > Añadir resultados» de JudoAdministración).
+  El combate **sigue en el tablón** y se disputa —es lo que hay que hacer para darle el vencedor a su
+  rival, y que éste sea conocedor de su victoria—, así que lo único que cambia es la raya: ni el color
+  ni el tamaño. Es la clase `tachado` de `Styles/AppStyles.axaml`, enlazada a
+  `Contendiente.Descalificado`.
 - **En medio, el peso** y a su derecha, entre paréntesis, **el número del combate dentro de ese
   peso**: es con lo que se localiza en el cuadro colgado en la pared. Los dos van en la **misma
   línea** porque son un solo dato —«el combate 12 de los -66»—; partido en dos renglones se leía como
@@ -351,6 +357,10 @@ si entretanto hubo otro cambio.
 
 Es también la razón de que esto **no** sea un sondeo: con diez tatamis en marcha y varias pantallas en
 la sala, preguntar en bucle serían miles de consultas al día para enterarse de lo mismo.
+
+**Se escuchan dos tablas, no una.** La de `combates` es la de siempre. La de `registros` hace falta
+para las **descalificaciones**: descalificar a alguien no toca ningún combate —solo su inscripción—,
+así que el nombre se quedaría sin tachar hasta el repaso periódico de §5.2 si el tablón no la mirase.
 
 **Los avisos llegan en ráfaga, y hay antirrebote.** Anotar un resultado dispara el trigger que propaga
 al ganador al combate siguiente del cuadro, así que un solo combate terminado produce varios `UPDATE`
