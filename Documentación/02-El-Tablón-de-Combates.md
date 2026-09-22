@@ -175,8 +175,15 @@ exactamente el mismo que enseña el marcador del tatami. Lo resuelve el servidor
 
 Delgada a propósito: cada píxel que se lleve es un píxel menos de alto para las cuarenta filas de
 debajo. Lleva el nombre de la competición, qué tatamis se están viendo («Tatamis 1 – 5»), el indicador
-de página cuando hay dos, la hora y dos botones pequeños de mantenimiento: **cerrar sesión** y
-**cerrar la aplicación**.
+de página cuando hay dos, el `−` y el `+` de la letra, la hora y dos botones pequeños de
+mantenimiento: **cerrar sesión** y **cerrar la aplicación**.
+
+**La hora va en el borde derecho** —solo le queda a la derecha el punto de la conexión— y **los dos
+botones de mantenimiento no se ven** hasta que el ratón pasa por encima de ella: entonces aparecen en
+su sitio y empujan la hora hacia la izquierda. Son para quien sube a la escalera, no para el público,
+y así la cabecera no enseña nada que invite a tocar. Al aparecer **no hacen crecer la cabecera**
+(llevan un margen negativo arriba y abajo): si creciera, el tablón entero daría un salto cada vez que
+alguien pasa el ratón.
 
 **La hora no es un adorno.** Es lo que dice de un vistazo que la pantalla está viva: una imagen
 congelada por un cuelgue y un tablón sin cambios porque no ha terminado ningún combate se ven
