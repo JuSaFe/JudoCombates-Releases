@@ -22,29 +22,35 @@ Red `192.168.2.0/24` · máscara `255.255.255.0` · puerta de enlace `192.168.2.
 | `192.168.2.3` | 1 | **Servidor** — PostgreSQL y la API |
 | `192.168.2.4` | 1 | Servidor de respaldo (reservada, §8) |
 | `192.168.2.5` – `.9` | 5 | Puestos de administración |
-| `192.168.2.10` – `.19` | 10 | Marcadores de tatami (JudoCrono) |
-| **`192.168.2.20` – `.29`** | **10** | **Pantallas de visualización — esta aplicación** |
-| `192.168.2.30` – `.99` | 70 | Libre (ampliación) |
+| `192.168.2.11` – `.20` | 10 | Marcadores de tatami (JudoCrono) |
+| **`192.168.2.21` – `.30`** | **10** | **Pantallas de visualización — esta aplicación** |
+| `192.168.2.31` – `.99` | 69 | Libre (ampliación) |
 | `192.168.2.100` – `.199` | 100 | Pool DHCP |
 | `192.168.2.200` – `.254` | 55 | Libre (pruebas y diagnóstico) |
 
-### 1.1 La convención: pantalla N → `192.168.2.(N + 19)`
+### 1.1 La convención: pantalla N → `192.168.2.(N + 20)`
 
-El último dígito de la dirección es el número de pantalla más diecinueve. No es una obligación
-técnica —el servidor no mira de qué IP viene cada cliente— pero se respeta siempre, porque es lo que
-permite saber a qué equipo estás mirando cuando algo va mal sin tener que recorrer el pabellón.
+La dirección termina en el número de pantalla más veinte: la pantalla 1 es la `.21`, la 5 la `.25`.
+No es una obligación técnica —el servidor no mira de qué IP viene cada cliente— pero se respeta
+siempre, porque es lo que permite saber a qué equipo estás mirando cuando algo va mal sin tener que
+recorrer el pabellón.
+
+> **Antes el rango empezaba en la `.20`** (pantalla 1 → `.20`). Se movió a la `.21` para que la
+> primera pantalla acabe en 1 y no en 0, que era lo que confundía. Un equipo configurado con el plan
+> viejo se queda con la dirección vieja hasta que se le vuelva a elegir la suya y se pulse
+> **Aplicar la red**.
 
 | Pantalla | Dirección | | Pantalla | Dirección |
 |---|---|---|---|---|
-| 1 | `192.168.2.20` | | 6 | `192.168.2.25` |
-| 2 | `192.168.2.21` | | 7 | `192.168.2.26` |
-| 3 | `192.168.2.22` | | 8 | `192.168.2.27` |
-| 4 | `192.168.2.23` | | 9 | `192.168.2.28` |
-| 5 | `192.168.2.24` | | 10 | `192.168.2.29` |
+| 1 | `192.168.2.21` | | 6 | `192.168.2.26` |
+| 2 | `192.168.2.22` | | 7 | `192.168.2.27` |
+| 3 | `192.168.2.23` | | 8 | `192.168.2.28` |
+| 4 | `192.168.2.24` | | 9 | `192.168.2.29` |
+| 5 | `192.168.2.25` | | 10 | `192.168.2.30` |
 
 ### 1.2 Por qué el máximo son diez pantallas
 
-Porque el rango reservado son diez direcciones, `.20` a `.29`. De ahí sale el límite del campo
+Porque el rango reservado son diez direcciones, `.21` a `.30`. De ahí sale el límite del campo
 **Número de esta pantalla**, que acepta de 1 a 10 y no más
 ([`PantallaView.axaml`](../Views/Configuracion/PantallaView.axaml),
 [`RangoPantallas`](../Services/Red/ModelosRed.cs)).
@@ -56,7 +62,7 @@ que lo normal es tener bastantes menos de diez: una en la entrada, una junto a l
 calentamiento, una en la mesa de control.
 
 Si algún día hicieran falta más, lo que hay que cambiar es el **plan de direcciones** —hay setenta
-libres a partir de la `.30`— y después el límite de `RangoPantallas`. Subir el límite del campo sin
+libres a partir de la `.31`— y después el límite de `RangoPantallas`. Subir el límite del campo sin
 ampliar el rango deja pantallas sin dirección propia.
 
 ### 1.3 Aquí el wifi sí vale
@@ -95,7 +101,7 @@ dos cosas:
 - decide su dirección IP, que el plan deriva de él según la convención de §1.1.
 
 Así que se pide **una vez**, y de él cuelga lo demás: la pantalla no pregunta qué dirección poner, la
-deduce —pantalla 3 → `192.168.2.22`—.
+deduce —pantalla 3 → `192.168.2.23`—.
 
 **Y va en los dos sentidos: mover el número mueve la dirección, y elegir una dirección mueve el
 número.** No son dos campos que puedan discrepar; son el mismo dato dicho de dos maneras. Siguen

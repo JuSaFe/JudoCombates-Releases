@@ -21,7 +21,7 @@ iniciar sesión —que es justo lo que no se puede hacer cuando el problema es l
 1. **Servidor**: `https://judo-server:8443`, y el nombre y la IP (`192.168.2.3`) con los que se
    escribe la línea del archivo `hosts`.
 2. **Número de pantalla**: del 1 al 10. De él sale la dirección IP del equipo (pantalla N →
-   `192.168.2.(N+19)`).
+   `192.168.2.(N+20)`).
 3. **Cambio de página**: cada cuántos segundos alterna entre las dos mitades de la sala. Veinte por
    defecto.
 4. **Red**: interfaz, dirección, puerta de enlace, máscara y DNS → **Aplicar la red**. Un solo
