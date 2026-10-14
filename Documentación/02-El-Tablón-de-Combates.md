@@ -171,6 +171,42 @@ El código —«ALC», «CVA», «ESP»— es el del **club, la comunidad o el p
 exactamente el mismo que enseña el marcador del tatami. Lo resuelve el servidor
 (`fn_agrupaciones_evento`), no la pantalla.
 
+#### Los encuentros por equipos
+
+En una competición por equipos dos equipos se enfrentan en un **encuentro**: un combate por peso, más
+el decisor si hay empate. Cada uno de esos combates es una fila normal del orden del tatami, y lo
+único que cambia en el tablón es que **la unidad que se enseña es el encuentro**: cada tanda de
+combates seguidos del mismo encuentro va precedida de una fila de **cabecera** con los dos equipos y
+cómo va.
+
+```
+ │      JUDO CLUB ALICANTE  │     2 – 1      │  C.D. ALGAR               │
+ │                          │ Encuentro nº 7 · Semifinal                │
+ ▌ 42 │ 🏳 ALC  PÉREZ GARCÍA, Luis   │  M -66 kg (12)  │  LÓPEZ SANZ, Juan  ALG 🏳 │
+                                   │       4/5       │
+```
+
+- **La cabecera tiene la geometría de un combate**: el equipo blanco (el 1) sobre la columna del
+  blanco, el azul sobre la del azul, y en el centro el marcador del encuentro con «Encuentro nº 7 ·
+  Semifinal» debajo, en el amarillo de la ronda. Va sobre una banda oscura y sin los degradados, para
+  que no se confunda nunca con un combate; lo que dice qué equipo es cuál es la raya de debajo de cada
+  nombre, del color de su lado.
+- **En los combates del encuentro, bajo el peso va cuál es de cuántos** —«4/5»— en lugar de la ronda,
+  que ya la dice la cabecera. El decisor pone «Decisor». El código y la bandera de cada lado son los
+  del **equipo**: es lo que identifica a cada bando, y lo manda así el servidor.
+- **La cabecera ocupa una de las cuatro filas.** La regla es una sola: se llena de arriba abajo, con
+  la cabecera delante de cada encuentro nuevo, y una cabecera **solo se pone si cabe al menos un
+  combate suyo debajo**; si no, la última fila se queda vacía. Lo normal es la cabecera y tres
+  combates; cuando al encuentro en curso le queda uno, su cabecera y su combate, y la cabecera y el
+  primer combate del siguiente (ver `TatamiEnTablon.Repartir`).
+- **Lo que no cambia**: el número de la cola de cada combate, la barra verde del que toca —en el
+  combate, nunca en la cabecera—, y los pendientes y el tiempo estimado de la cabecera del tatami,
+  que siguen contando combates.
+
+Los combates sin nadie a ningún lado llegan como sin disputa y no salen, y los que se ganan sin
+combatir (un lado vacío) el servidor ya no los manda. **Un evento individual —o un servidor anterior
+a los equipos, que no manda estos datos— se ve exactamente igual que siempre.**
+
 ### 3.5 La cabecera
 
 Delgada a propósito: cada píxel que se lleve es un píxel menos de alto para las cuarenta filas de
@@ -368,6 +404,11 @@ la sala, preguntar en bucle serían miles de consultas al día para enterarse de
 **Se escuchan dos tablas, no una.** La de `combates` es la de siempre. La de `registros` hace falta
 para las **descalificaciones**: descalificar a alguien no toca ningún combate —solo su inscripción—,
 así que el nombre se quedaría sin tachar hasta el repaso periódico de §5.2 si el tablón no la mirase.
+
+En la competición por equipos se escuchan además `encuentros`, `equipos_competicion` y
+`divisiones_equipos`, y cualquiera de ellas relee igual que un cambio de combates: el marcador del
+encuentro, el nombre de un equipo y el «de 5» de cada combate viven ahí (ver §3.4, los encuentros
+por equipos).
 
 **Los avisos llegan en ráfaga, y hay antirrebote.** Anotar un resultado dispara el trigger que propaga
 al ganador al combate siguiente del cuadro, así que un solo combate terminado produce varios `UPDATE`
